@@ -1,0 +1,16 @@
+<!-- app.component.html -->
+<form [formGroup]="confForm" (ngSubmit)="calculate()">
+    <label>Ihmisten määrä
+        <input type="number" min="0" step="1" formControlName="people" />
+    </label>
+    
+    <label>Ryhmien määrä
+        <input type="number" min="0" step="1" formControlName="groups" />
+    </label>
+
+    <button type="submit" [disabled]="!confForm.valid">Submit</button>
+</form>
+
+<div>
+    <p>Result: people {{ people }}, groups {{ groups }}</p>
+</div>  
