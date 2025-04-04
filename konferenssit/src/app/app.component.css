@@ -1,0 +1,45 @@
+label {
+    width: 50%;
+    display: block;
+    margin: 12px 0;
+    min-width: 100px;
+}
+
+input[type="number"] {
+    height: 30px;
+    border: 1px solid #000;
+    padding: 0px 4px;
+    line-height: 30px;
+    border-radius: 4px;
+}
+
+input[type="number"]:hover {
+    border: 1px solid #000;
+}
+
+button[type="submit"] {
+    height: 32px;
+    border: 1px solid black;
+    padding: 4px 20px;
+    font-size: 12pt;
+    border-radius: 4px;
+    background-color: rgb(255, 255, 255);
+}
+
+button[type="submit"]:disabled {
+    border-color: #ddd;
+}
+
+button[type="submit"]:hover:not(:disabled),
+button[type="submit"]:active:not(:disabled) {
+    color: #f2f2f2;
+    background-color: #000;
+}
+
+.rounds, .message {
+    margin: 12px 0;
+}
+
+.rounds .round {
+    font-weight: bold;
+}

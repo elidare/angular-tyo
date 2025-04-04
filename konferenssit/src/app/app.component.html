@@ -1,0 +1,27 @@
+<!-- app.component.html -->
+<form [formGroup]="confForm" (ngSubmit)="calculate()">
+    <label>Ihmisten määrä (1-1000)
+        <input type="number" min="1" max="1000" step="1" formControlName="people" />
+    </label>
+
+    <label>Ryhmien määrä (1-1000)
+        <input type="number" min="1" max="1000" step="1" formControlName="groups" />
+    </label>
+
+    <button type="submit" [disabled]="!confForm.valid">Lähetä</button>
+</form>
+
+<div *ngIf="participantsNumber > 0 && groupsNumber > 0 && participantsNumber >= groupsNumber">
+    <p>Tulokset: {{ participantsNumber }} ihmistä, {{ groupsNumber }} ryhmiä; eniten {{ groupSize }} ihmistä ryhmissä; {{ roundsNumber }} kierrosta.</p>
+    <div class="rounds" *ngFor="let round of rounds; let roundIndex = index;">
+        <div class="round">Kierros: {{ roundIndex + 1 }}</div>
+        <span>
+            <ng-container *ngFor="let item of round; let groupIndex = index; let last = last">
+                Ryhmä {{ groupIndex + 1 }}: {{ item }}<span *ngIf="!last">,</span>
+            </ng-container>
+        </span> 
+    </div>
+</div>
+<div class="message" *ngIf="participantsNumber == 0 || groupsNumber == 0 || participantsNumber < groupsNumber">
+    Syötäthän ihmisten ja ryhmien määrä. Ihmisten määrän täytyy olla enemmän tai sama kuin ryhmien määrä.
+</div>
