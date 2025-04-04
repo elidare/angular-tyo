@@ -1,9 +1,9 @@
 # Angular harjoitustyö
 
 ## Käynnistäminen
-`git clone git@github.com:elidare/angular-tyo.git`
-`cd konferenssit/`
-`ng serve`
+- `git clone git@github.com:elidare/angular-tyo.git`
+- `cd konferenssit/`
+- `ng serve`
 
 Sovellus on saatavilla http://localhost:4200/
 
@@ -11,7 +11,7 @@ Sovellus on saatavilla http://localhost:4200/
 
 Tämä työ oli vaikea kombinatorisen tehtävän vuoksi ja myös siksi, että minulla ei ole ollut Angularin kokemusta.
 
-Ensin, oli hankala ymmärtää tehtävää (en ole todella hyvä tällaisissa matemaattisissa tehtävissä ja jos se olisi venäjäksi, olisin samassa tilanteessa). Siellä pyysin chatGPT:tä auttamaan minua löytämään ratkaisun. Se antoi jonkinlaisen ratkaisun, joka lopulta osoittautui virheelliseksi, ja luulen, että sen selvittäminen kestäisi minulle useita tunteja. Sillä tavalla päätin keskittyä Angularin osaan.
+Ensin, oli hankala ymmärtää tehtävää (en ole todella hyvä tällaisissa matemaattisissa tehtävissä ja jos se olisi äidinkielelläni, olisin samassa tilanteessa). Siellä pyysin chatGPT:tä auttamaan minua löytämään ratkaisun. Se antoi jonkinlaisen ratkaisun, joka lopulta osoittautui virheelliseksi, ja luulen, että sen selvittäminen kestäisi minulle useita tunteja. Sillä tavalla päätin keskittyä Angularin osaan.
 
 Loin form:in, jossa on 2 input:ia, ja tulokset lasketaan napsauttamalla `Lähetä` painiketta.
 Input:iin voi syöttää vain kokonaisluku numerot enemmän kuin 0. `Lähetä` on `disabled` kun yksi tai molemmat inputit on tyhjät, tai jos inputeilla on 0/0. Molemmat määrät on rajoitettu 1000:ksi.
